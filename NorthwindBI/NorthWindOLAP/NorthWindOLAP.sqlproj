@@ -58,5 +58,16 @@
     <Folder Include="Properties" />
     <Folder Include="Squema" />
     <Folder Include="Scripts" />
+    <Folder Include="Squema\Tables" />
+    <Folder Include="Squema\Tables\dbo" />
+    <Folder Include="Squema\Tables\staging" />
+    <Folder Include="Scripts\Tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Squema\Tables\staging\shippper.sql" />
+    <Build Include="Squema\Tables\dbo\DimShipper.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Tables\PackageConfig.data.sql" />
   </ItemGroup>
 </Project>
