@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/NorthWindETL/" />
+  <Folder Name="/NorthWindOLAP/">
+    <Project Path="NorthWindOLAP/NorthWindOLAP.sqlproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
+  <Folder Name="/NorthWindOLTP/">
+    <Project Path="NorthWindOLTP/NorthWindOLTP.sqlproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
+</Solution>
