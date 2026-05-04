@@ -1,13 +1,13 @@
 <Solution>
   <Folder Name="/NorthWindETL/" />
   <Folder Name="/NorthWindOLAP/">
-    <Project Path="NorthWindOLAP/NorthWindOLAP.sqlproj">
+    <Project Path="NorthWindOLAP/NorthWindOLAP.sqlproj" Id="c20e519c-0448-4915-b662-050ba4820275">
       <Build />
       <Deploy />
     </Project>
   </Folder>
   <Folder Name="/NorthWindOLTP/">
-    <Project Path="NorthWindOLTP/NorthWindOLTP.sqlproj">
+    <Project Path="NorthWindOLTP/NorthWindOLTP.sqlproj" Id="a986eaa0-f7bd-49f6-8893-cea47e787f86">
       <Build />
       <Deploy />
     </Project>

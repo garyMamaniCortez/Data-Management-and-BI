@@ -58,5 +58,13 @@
     <Folder Include="Properties" />
     <Folder Include="Scripts" />
     <Folder Include="Squema" />
+    <Folder Include="Squema\Tables" />
+    <Folder Include="Scripts\Tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Squema\Tables\shippers.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Tables\shipppers.data.sql" />
   </ItemGroup>
 </Project>

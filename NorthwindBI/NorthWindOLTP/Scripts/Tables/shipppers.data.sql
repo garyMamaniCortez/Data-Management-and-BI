@@ -1,0 +1,22 @@
+﻿INSERT INTO [dbo].[Shippers] ([CompanyName], [Phone])
+VALUES 
+('Envíos Rápidos S.A.', '(55) 1234-5678'),
+('Logística Express', '(33) 8765-4321'),
+('Mensajería Flash', '(81) 2345-6789'),
+('Paquetería Segura', '(664) 9876-5432'),
+('Transportes Ágil', '(442) 3456-7890'),
+('Courier Premium', '(477) 6543-2109'),
+('Encomiendas YA', '(999) 123-4567'),
+('Servicios Logísticos del Sur', '(961) 789-0123'),
+('Delivery Express Norte', '(686) 234-5678'),
+('Mega Envíos', '(33) 5555-1234'),
+('Rápido Seguro E-commerce', '(55) 9876-5432'),
+('Logística Integral', '(81) 4321-0987'),
+('Transporte Confiable', '(442) 111-2233'),
+('Envíos Prime', '(477) 888-9999'),
+('Paquetexpress', '(55) 5678-1234'),
+('Mensajería Urgente', '(33) 2468-1357'),
+('Carga Fácil S.A.', '(999) 444-5566'),
+('Distribuciones Rápidas', '(686) 777-8888'),
+('LogiShip Global', '(55) 9999-0000'),
+('Envíos 24/7', '(81) 3030-5050');
