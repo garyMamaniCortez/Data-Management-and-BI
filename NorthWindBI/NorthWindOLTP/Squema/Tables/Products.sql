@@ -1,15 +1,21 @@
-﻿CREATE TABLE [dbo].[Products](
-	[ProductID] [int] IDENTITY(1,1) NOT NULL,
-	[ProductName] [nvarchar](40) NOT NULL,
-	[SupplierID] [int] NULL,
-	[CategoryID] [int] NULL,
-	[QuantityPerUnit] [nvarchar](20) NULL,
-	[UnitPrice] [money] NULL,
-	[UnitsInStock] [smallint] NULL,
-	[UnitsOnOrder] [smallint] NULL,
-	[ReorderLevel] [smallint] NULL,
-	[Discontinued] [bit] NOT NULL,
-	[rowversion] [timestamp] NULL,
+﻿-- Tabla: Products
+-- Descripcion: Tabla de productos del sistema OLTP normalizado
+-- Contiene informacion de productos con referencias a categorias y proveedores
+-- Proposito: Almacenar datos transaccionales de productos para operaciones del negocio
+-- Uso: Sistema de ordenes, inventario y ventas en tiempo real
+
+CREATE TABLE [dbo].[Products](
+	[ProductID] [int] IDENTITY(1,1) NOT NULL,					-- Clave primaria del producto
+	[ProductName] [nvarchar](40) NOT NULL,						-- Nombre del producto
+	[SupplierID] [int] NULL,									-- Referencia al proveedor
+	[CategoryID] [int] NULL,									-- Referencia a la categoria
+	[QuantityPerUnit] [nvarchar](20) NULL,						-- Cantidad por unidad
+	[UnitPrice] [money] NULL,									-- Precio unitario
+	[UnitsInStock] [smallint] NULL,								-- Unidades disponibles en inventario
+	[UnitsOnOrder] [smallint] NULL,								-- Unidades pendientes de recibir
+	[ReorderLevel] [smallint] NULL,								-- Cantidad minima antes de reordenar
+	[Discontinued] [bit] NOT NULL,								-- Indicador de producto descontinuado
+	[rowversion] [timestamp] NULL,								-- Control de concurrencia y versionado de filas
  CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
 (
 	[ProductID] ASC
