@@ -66,6 +66,7 @@
     <Build Include="Squema\Tables\Products.sql" />
     <Build Include="Squema\Tables\Categories.sql" />
     <Build Include="Squema\Tables\Suppliers.sql" />
+    <Build Include="Squema\Tables\Customers.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\shipppers.data.sql" />
