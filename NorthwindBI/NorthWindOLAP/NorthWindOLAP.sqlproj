@@ -69,6 +69,12 @@
     <Build Include="Squema\Tables\dbo\PackageConfig.sql" />
     <Build Include="Squema\Tables\staging\Product.sql" />
     <Build Include="Squema\Tables\dbo\DimProducts.sql" />
+    <Build Include="Squema\Tables\staging\employee.sql" />
+    <Build Include="Squema\Tables\dbo\DimEmployee.sql" />
+    <Build Include="Squema\Tables\staging\sales.sql" />
+    <Build Include="Squema\Tables\dbo\FactSales.sql" />
+    <Build Include="Squema\Tables\dbo\DimDate.sql" />
+    <Build Include="Squema\Tables\dbo\DimCustomer.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\PackageConfig.data.sql" />

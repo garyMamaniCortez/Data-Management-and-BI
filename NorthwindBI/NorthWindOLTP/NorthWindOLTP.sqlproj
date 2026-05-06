@@ -67,6 +67,15 @@
     <Build Include="Squema\Tables\Categories.sql" />
     <Build Include="Squema\Tables\Suppliers.sql" />
     <Build Include="Squema\Tables\Customers.sql" />
+    <Build Include="Squema\Tables\Employees.sql" />
+    <Build Include="Squema\Tables\OrderDetails.sql" />
+    <Build Include="Squema\Tables\Orders.sql" />
+    <Build Include="Squema\Tables\Suppliers.sql" />
+    <Build Include="Squema\Tables\CustomerCustomerDemo.sql" />
+    <Build Include="Squema\Tables\CustomerDemographics.sql" />
+    <Build Include="Squema\Tables\EmployeeTerritories.sql" />
+    <Build Include="Squema\Tables\Region.sql" />
+    <Build Include="Squema\Tables\Territories.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\shipppers.data.sql" />
