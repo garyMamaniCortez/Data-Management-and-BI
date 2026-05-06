@@ -69,7 +69,7 @@
     <Build Include="Squema\Tables\dbo\PackageConfig.sql" />
     <Build Include="Squema\Tables\staging\Product.sql" />
     <Build Include="Squema\Tables\dbo\DimProducts.sql" />
-    <Build Include="Squema\Tables\staging\DimCostumer.sql" />
+    <Build Include="Squema\Tables\staging\Costumer.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\PackageConfig.data.sql" />
