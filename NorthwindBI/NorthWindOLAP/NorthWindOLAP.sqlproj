@@ -74,6 +74,7 @@
     <Build Include="Squema\Tables\staging\sales.sql" />
     <Build Include="Squema\Tables\dbo\FactSales.sql" />
     <Build Include="Squema\Tables\dbo\DimDate.sql" />
+    <Build Include="Squema\Tables\staging\Customer.sql" />
     <Build Include="Squema\Tables\dbo\DimCustomer.sql" />
   </ItemGroup>
   <ItemGroup>
