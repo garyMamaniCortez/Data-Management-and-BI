@@ -28,13 +28,13 @@ El modelo OLTP está normalizado (3FN) e incluye las siguientes entidades princi
 
 #### Diagrama del modelo OLTP
 
-
+![Diagrama de Base de Datos NorthWind OLTP](./Files/Images/NorthWindOLTPDatabaseDiagram.png)
 
 ### Base de Datos OLAP (NorthWindOLAP)
 
 Modelo estrella con:
 
-- **Tabla de hechos**: `FactSales` (ventas con métricas: cantidad, precio, descuento, ventas netas, flete, ingreso bruto).
+- **Tabla de hechos**: `FactSales`.
 - **Dimensiones**: 
   - `DimDate` (fechas)
   - `DimCustomer`
@@ -43,10 +43,15 @@ Modelo estrella con:
   - `DimShipper`
 - **Esquema staging**: Tablas intermedias para ETL (extracción, transformación y carga).
 
+#### Métricas de Ventas e Ingresos
+
+- Ventas Netas por período (día, mes, trimestre, año)
+- Ingreso Bruto por producto/categoría
+- Volumen de ventas por producto
+
 #### Diagrama del modelo OLAP
 
-
-
+![Diagrama de Base de Datos NorthWind OLAP](./Files/Images/NorthWindOLAPDatabaseDiagram.png)
 
 ## Instrucciones para Desplegar
 
