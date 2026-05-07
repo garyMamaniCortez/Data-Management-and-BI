@@ -9,6 +9,12 @@ Este proyecto implementa la base de datos para un sistema de **Ecommerce** basad
 
 El objetivo es separar el procesamiento de transacciones en línea del análisis de datos, mejorando el rendimiento y la capacidad de reporteo.
 
+## Integrantes del grupo
+- Diego Alvarado García
+- Erick Alejandro Quiroz Gil
+- Sebastian Gustavo Marin Ovando
+- Ayelen Anahi Ortiz Robledo
+- Jhonny Gary Mamani Cortez
 ## Modelo de Datos
 
 ### Base de Datos OLTP (NorthWindOLTP)
