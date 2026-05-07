@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -65,10 +65,21 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Squema\Tables\staging\shippper.sql" />
+    <Build Include="Squema\Tables\staging\sales.sql" />
+    <Build Include="Squema\Tables\staging\Product.sql" />
+    <Build Include="Squema\Tables\staging\employee.sql" />
+    <Build Include="Squema\Tables\staging\Customer.sql" />
     <Build Include="Squema\Tables\dbo\DimShipper.sql" />
     <Build Include="Squema\Tables\dbo\PackageConfig.sql" />
-    <Build Include="Squema\Tables\DimProducts.sql" />
+    <Build Include="Squema\Tables\dbo\DimProducts.sql" />
     <Build Include="Squema\Tables\dbo\DimCustomer.sql" />
+    <Build Include="Squema\Tables\dbo\DimEmployee.sql" />
+    <Build Include="Squema\Tables\dbo\FactSales.sql" />
+    <Build Include="Squema\Tables\dbo\DimDate.sql" />
+  
+
+
+    
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\PackageConfig.data.sql" />
