@@ -62,6 +62,8 @@
     <Folder Include="Squema\Tables\dbo" />
     <Folder Include="Squema\Tables\staging" />
     <Folder Include="Scripts\Tables" />
+    <Folder Include="Squema\Programmability" />
+    <Folder Include="Squema\Programmability\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Squema\Tables\staging\Customer.sql" />
@@ -76,8 +78,12 @@
     <Build Include="Squema\Tables\staging\sales.sql" />
     <Build Include="Squema\Tables\dbo\FactSales.sql" />
     <Build Include="Squema\Tables\dbo\PackageConfig.sql" />
+    <Build Include="Squema\Programmability\Stored Procedures\GetLastPackageRowVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\PackageConfig.data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Tables\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
