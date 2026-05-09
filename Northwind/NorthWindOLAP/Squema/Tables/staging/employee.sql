@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [staging].[employee] (
-    [EmployeeID]       INT           NOT NULL,
+    [EmployeeSK]       INT           NOT NULL,
     [FullName]         NVARCHAR(31)  NOT NULL,
     [LastName]         NVARCHAR(20)  NOT NULL,
     [FirstName]        NVARCHAR(10)  NOT NULL,

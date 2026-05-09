@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [staging].[customer](
-	[CustomerID] [nchar](5) NOT NULL,
+	[CustomerSK] [nchar](5) NOT NULL,
 	[CompanyName] [nvarchar](40) NOT NULL,
 	[ContactName] [nvarchar](30) NULL,
 	[ContactTitle] [nvarchar](30) NULL,

@@ -14,7 +14,7 @@ CREATE SCHEMA [staging];
 GO
 
 CREATE TABLE [staging].[customer] (
-    [CustomerID]        NCHAR(5)      NOT NULL,               -- Clave negocio (original)
+    [CustomerSK]        NCHAR(5)      NOT NULL,               -- Clave negocio (original)
     [CompanyName]       NVARCHAR(40)  NOT NULL,
     [ContactName]       NVARCHAR(30)  NULL,
     [ContactTitle]      NVARCHAR(30)  NULL,
@@ -30,7 +30,7 @@ CREATE TABLE [staging].[customer] (
 GO
 
 CREATE TABLE [staging].[employee] (
-    [EmployeeID]       INT           NOT NULL,
+    [EmployeeSK]       INT           NOT NULL,
     [FullName]         NVARCHAR(31)  NOT NULL,
     [LastName]         NVARCHAR(20)  NOT NULL,
     [FirstName]        NVARCHAR(10)  NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE [staging].[employee] (
 GO
 
 CREATE TABLE [staging].[product] (
-    [ProductID]        INT           NOT NULL,
+    [ProductSK]        INT           NOT NULL,
     [ProductName]      NVARCHAR(40)  NOT NULL,
     [QuantityPerUnit]  NVARCHAR(20)  NULL,
     [UnitPrice]        MONEY         NULL,

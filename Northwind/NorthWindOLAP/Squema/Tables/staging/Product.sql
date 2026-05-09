@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [staging].[product](
-	[ProductID] [int] NOT NULL,
+	[ProductSK] [int] NOT NULL,
 	[ProductName] [nvarchar](40) NOT NULL,
 	[QuantityPerUnit] [nvarchar](20) NULL,
 	[UnitPrice] [money] NULL,
