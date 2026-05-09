@@ -79,11 +79,12 @@
     <Build Include="Squema\Tables\Region.sql" />
     <Build Include="Squema\Tables\Territories.sql" />
     <Build Include="Squema\Programmability\Stored Procedures\GetShipperChangesByRowVersion.sql" />
+    <Build Include="Squema\Programmability\Stored Procedures\GetDatabaseRowVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\shipppers.data.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Squema\Programmability\Stored Procedures\GetDatabaseRowVersion.sql" />
+    <PostDeploy Include="Scripts\Tables\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
