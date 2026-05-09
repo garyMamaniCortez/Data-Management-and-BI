@@ -60,6 +60,8 @@
     <Folder Include="Squema" />
     <Folder Include="Squema\Tables" />
     <Folder Include="Scripts\Tables" />
+    <Folder Include="Squema\Programmability" />
+    <Folder Include="Squema\Programmability\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Squema\Tables\shippers.sql" />
@@ -79,5 +81,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\shipppers.data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Squema\Programmability\Stored Procedures\GetDatabaseRowVersion.sql" />
   </ItemGroup>
 </Project>
