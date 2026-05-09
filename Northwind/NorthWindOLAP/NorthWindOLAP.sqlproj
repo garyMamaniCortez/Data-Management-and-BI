@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\PackageConfig.data.sql" />
+    <None Include="Scripts\Tables\DimDate.data.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Tables\Script.PostDeployment.sql" />

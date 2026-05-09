@@ -11,3 +11,4 @@ Plantilla de script posterior a la implementación
 */
 
 :r .\PackageConfig.data.sql
+:r .\DimDate.data.sql
