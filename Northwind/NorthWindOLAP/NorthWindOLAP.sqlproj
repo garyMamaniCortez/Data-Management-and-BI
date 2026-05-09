@@ -79,6 +79,8 @@
     <Build Include="Squema\Tables\dbo\FactSales.sql" />
     <Build Include="Squema\Tables\dbo\PackageConfig.sql" />
     <Build Include="Squema\Programmability\Stored Procedures\GetLastPackageRowVersion.sql" />
+    <Build Include="Squema\Programmability\Stored Procedures\DW_MergeDimShipper.sql" />
+    <Build Include="Squema\Programmability\Stored Procedures\UpdateLastPackageRowVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\PackageConfig.data.sql" />
