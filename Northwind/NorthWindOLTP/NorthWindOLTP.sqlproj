@@ -80,9 +80,11 @@
     <Build Include="Squema\Tables\Territories.sql" />
     <Build Include="Squema\Programmability\Stored Procedures\GetShipperChangesByRowVersion.sql" />
     <Build Include="Squema\Programmability\Stored Procedures\GetDatabaseRowVersion.sql" />
+    <Build Include="Squema\Programmability\Stored Procedures\GetEmployeeChangesByRowVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\shipppers.data.sql" />
+    <None Include="Scripts\Tables\Employees.data.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Tables\Script.PostDeployment.sql" />

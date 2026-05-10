@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{E3B6D9AC-A715-46D1-A7E5-58904A064A0C}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{0D58B7A9-5181-4A9D-85E7-A218C64C9D2F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -838,21 +838,29 @@ where [refTable].[ShipperID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="159,42"
+          Size="159.2,41.6"
           Id="Package\Clean-up Staging"
           TopLeft="299,166" />
         <NodeLayout
-          Size="151,42"
+          Size="151.2,41.6"
           Id="Package\Data Flow Task"
           TopLeft="302,227" />
         <NodeLayout
-          Size="200,42"
+          Size="200,41.6"
           Id="Package\Get Database Rowversion"
           TopLeft="267,28" />
         <NodeLayout
-          Size="175,42"
+          Size="175.2,41.6"
           Id="Package\Get Last Rowversion"
           TopLeft="285,102" />
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\Sync Dim"
+          TopLeft="566,230" />
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\Update Config"
+          TopLeft="540,317" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="369.75,70">
@@ -943,10 +951,6 @@ where [refTable].[ShipperID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Sync Dim"
-          TopLeft="566,230" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
           TopLeft="453,252.333333333333">
@@ -969,10 +973,6 @@ where [refTable].[ShipperID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="146,42"
-          Id="Package\Update Config"
-          TopLeft="540,317" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
           TopLeft="627.5,272">
@@ -1016,13 +1016,21 @@ where [refTable].[ShipperID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="124,42"
+          Size="124,41.6"
           Id="Package\Data Flow Task\Load Dim"
           TopLeft="432,215" />
         <NodeLayout
-          Size="113,42"
+          Size="112.8,41.6"
           Id="Package\Data Flow Task\Lookup"
           TopLeft="280,98" />
+        <NodeLayout
+          Size="139.2,41.6"
+          Id="Package\Data Flow Task\Get Shippers"
+          TopLeft="269,41" />
+        <NodeLayout
+          Size="139.2,41.6"
+          Id="Package\Data Flow Task\Load staging"
+          TopLeft="178,211" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="408,62">
@@ -1093,10 +1101,6 @@ where [refTable].[ShipperID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Data Flow Task\Load staging"
-          TopLeft="178,211" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
           TopLeft="319,140">
@@ -1133,10 +1137,6 @@ where [refTable].[ShipperID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Data Flow Task\Get Shippers"
-          TopLeft="269,41" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -1154,20 +1154,12 @@ where [refTable].[ShipperID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Get Shippers">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1177,8 +1169,16 @@ where [refTable].[ShipperID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Get Shippers">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
