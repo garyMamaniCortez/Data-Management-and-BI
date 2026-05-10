@@ -13,3 +13,8 @@ Plantilla de script posterior a la implementación
 :r .\shipppers.data.sql
 
 :r .\Employees.data.sql
+/*Erick*/
+:r .\Suppliers.data.sql
+:r .\Categories.data.sql
+:r .\Products.data.sql
+/*end*/
