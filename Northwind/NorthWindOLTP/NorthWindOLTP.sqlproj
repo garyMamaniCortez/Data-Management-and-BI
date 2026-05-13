@@ -82,6 +82,7 @@
     <Build Include="Squema\Programmability\Stored Procedures\GetDatabaseRowVersion.sql" />
     <Build Include="Squema\Programmability\Stored Procedures\GetEmployeeChangesByRowVersion.sql" />
     <Build Include="Squema\Programmability\Stored Procedures\GetProductsChangesByRowVersion.sql" />
+    <Build Include="Squema\Programmability\Stored Procedures\GetCustomerChangesByRowVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\shipppers.data.sql" />
@@ -89,6 +90,7 @@
     <None Include="Scripts\Tables\Categories.data.sql" />
     <None Include="Scripts\Tables\Products.data.sql" />
     <None Include="Scripts\Tables\Suppliers.data.sql" />
+    <None Include="Scripts\Tables\Customers.data.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Tables\Script.PostDeployment.sql" />

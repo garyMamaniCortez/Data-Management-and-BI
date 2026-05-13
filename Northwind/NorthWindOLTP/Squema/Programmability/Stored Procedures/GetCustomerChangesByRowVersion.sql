@@ -9,13 +9,35 @@ Plantilla de script posterior a la implementación
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+CREATE PROCEDURE [dbo].[GetCustomerChangesByRowVersion]
+(
+    @startRow BIGINT,
+    @endRow   BIGINT
+)
+AS
+BEGIN
 
-:r .\shipppers.data.sql
+    SET NOCOUNT ON;
 
-:r .\Employees.data.sql
-/*Erick*/
-:r .\Suppliers.data.sql
-:r .\Categories.data.sql
-:r .\Products.data.sql
-:r .\Customers.data.sql
-/*end*/
+    SELECT
+        C.[CustomerID],
+        C.[CompanyName],
+        C.[ContactName],
+        C.[ContactTitle],
+        C.[Address],
+        C.[City],
+        C.[Region],
+        C.[PostalCode],
+        C.[Country],
+        C.[Phone],
+        C.[Fax]
+
+    FROM [dbo].[Customers] C
+
+    WHERE C.[rowversion] > CONVERT(ROWVERSION, @startRow)
+      AND C.[rowversion] <= CONVERT(ROWVERSION, @endRow)
+
+    ORDER BY C.[rowversion];
+
+END
+GO

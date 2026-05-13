@@ -64,6 +64,8 @@
     <Folder Include="Scripts\Tables" />
     <Folder Include="Squema\Programmability" />
     <Folder Include="Squema\Programmability\Stored Procedures" />
+    <Folder Include="Squema\Security" />
+    <Folder Include="Squema\Security\schemas" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Squema\Tables\staging\Customer.sql" />
@@ -83,10 +85,12 @@
     <Build Include="Squema\Programmability\Stored Procedures\UpdateLastPackageRowVersion.sql" />
     <Build Include="Squema\Programmability\Stored Procedures\DW_MergeDimEmployee.sql" />
     <Build Include="Squema\Programmability\Stored Procedures\DW_MergeDimProducts.sql" />
+    <Build Include="Squema\Programmability\Stored Procedures\DW_MergeDimCustomer.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\PackageConfig.data.sql" />
     <None Include="Scripts\Tables\DimDate.data.sql" />
+    <None Include="Squema\Security\schemas\staging.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Tables\Script.PostDeployment.sql" />
