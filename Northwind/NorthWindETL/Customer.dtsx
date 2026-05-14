@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{0968F4F0-F08A-4038-9CE2-2E9FFDFEF703}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{D36D880C-5A32-45B0-AC47-AE10F0B4B2CD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=Diego;Initial Catalog=Nuevo;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{C1AFA80C-B2A5-4FBC-A284-BE21C3FC0EB6}DESKTOP-GSIA0QH\MSSQLSERVER02.NorthWindOLTP;" />
+          DTS:ConnectionString="Data Source=DESKTOP-HNDET80;Initial Catalog=NorthWindOLTP3;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{C1AFA80C-B2A5-4FBC-A284-BE21C3FC0EB6}DESKTOP-GSIA0QH\MSSQLSERVER02.NorthWindOLTP;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=Diego;Initial Catalog=Nueva2;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{1C376980-9AC4-4620-9C9A-7AD4EFB340E7}DESKTOP-GSIA0QH\MSSQLSERVER02.NorthWindOLAP;" />
+          DTS:ConnectionString="Data Source=DESKTOP-HNDET80;Initial Catalog=NorthWindOLAP3;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{1C376980-9AC4-4620-9C9A-7AD4EFB340E7}DESKTOP-GSIA0QH\MSSQLSERVER02.NorthWindOLAP;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1216,27 +1216,27 @@ where [refTable].[CustomerID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\Clean-up Staging"
           TopLeft="299,166" />
         <NodeLayout
-          Size="151.2,41.6"
+          Size="151,42"
           Id="Package\Data Flow Task"
           TopLeft="302,227" />
         <NodeLayout
-          Size="200,41.6"
+          Size="200,42"
           Id="Package\Get Database Rowversion"
           TopLeft="267,28" />
         <NodeLayout
-          Size="175.2,41.6"
+          Size="175,42"
           Id="Package\Get Last Rowversion"
           TopLeft="285,102" />
         <NodeLayout
-          Size="123.2,41.6"
+          Size="123,42"
           Id="Package\Sync Dim"
-          TopLeft="566,230" />
+          TopLeft="290,314" />
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\Update Config"
           TopLeft="540,317" />
         <EdgeLayout
@@ -1331,35 +1331,13 @@ where [refTable].[CustomerID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
-          TopLeft="453,252.333333333333">
+          TopLeft="377.5,269">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="113,0"
+              EndConnector="-26,45"
               Start="0,0"
-              End="105.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="105.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción 4]"
-          TopLeft="627.5,272">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-14.5,45"
-              Start="0,0"
-              End="-14.5,37.5">
+              End="-26,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1370,13 +1348,35 @@ where [refTable].[CustomerID] = ?</property>
                     Point2="0,22.5"
                     Point3="-4,22.5" />
                   <mssgle:LineSegment
-                    End="-10.5,22.5" />
+                    End="-22,22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-10.5,22.5"
-                    Point2="-14.5,22.5"
-                    Point3="-14.5,26.5" />
+                    Point1="-22,22.5"
+                    Point2="-26,22.5"
+                    Point3="-26,26.5" />
                   <mssgle:LineSegment
-                    End="-14.5,37.5" />
+                    End="-26,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 4]"
+          TopLeft="413,336.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="127,0"
+              Start="0,0"
+              End="119.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="119.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1519,25 +1519,12 @@ where [refTable].[CustomerID] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Load Dim">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1547,7 +1534,7 @@ where [refTable].[CustomerID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1559,6 +1546,19 @@ where [refTable].[CustomerID] = ?</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Load Dim">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

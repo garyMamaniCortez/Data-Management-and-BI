@@ -86,6 +86,8 @@
     <Build Include="Squema\Programmability\Stored Procedures\DW_MergeDimEmployee.sql" />
     <Build Include="Squema\Programmability\Stored Procedures\DW_MergeDimProducts.sql" />
     <Build Include="Squema\Programmability\Stored Procedures\DW_MergeDimCustomer.sql" />
+    <Build Include="Squema\Programmability\Stored Procedures\DW_MergeFactSales.sql" />
+    <Build Include="Squema\Programmability\Stored Procedures\DW_LoadDimDateFromSales.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Tables\PackageConfig.data.sql" />

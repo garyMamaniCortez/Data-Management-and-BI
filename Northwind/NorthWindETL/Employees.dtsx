@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Employees"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{82930498-42DA-4A02-B376-68184D4C0D0B}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{D4CF9F4F-33D7-4835-B3A5-4915BF213C1B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-R8NTK7SA;Initial Catalog=NorthWindOLTP;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Employees-{A874CFC7-4357-4F48-BD24-6D9133290EE1}LAPTOP-R8NTK7SA.NorthWindOLTP;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-HNDET80;Initial Catalog=NorthWindOLTP3;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Employees-{A874CFC7-4357-4F48-BD24-6D9133290EE1}LAPTOP-R8NTK7SA.NorthWindOLTP;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-R8NTK7SA;Initial Catalog=NorthWindOLAP;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Employees-{E3D3FDF3-B74A-4E50-88D8-10DB4399E1DF}LAPTOP-R8NTK7SA.NorthWindOLAP;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-HNDET80;Initial Catalog=NorthWindOLAP3;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Employees-{E3D3FDF3-B74A-4E50-88D8-10DB4399E1DF}LAPTOP-R8NTK7SA.NorthWindOLAP;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -292,15 +292,6 @@
                       name="Extension"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Get Employees.Outputs[OLE DB Source Output].Columns[Photo]"
-                      dataType="image"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Get Employees.Outputs[OLE DB Source Output].ExternalColumns[Photo]"
-                      lineageId="Package\Data Flow Task\Get Employees.Outputs[OLE DB Source Output].Columns[Photo]"
-                      name="Photo"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task\Get Employees.Outputs[OLE DB Source Output].Columns[Notes]"
                       dataType="nText"
                       errorOrTruncationOperation="Conversión"
@@ -419,10 +410,6 @@
                       length="4"
                       name="Extension" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Get Employees.Outputs[OLE DB Source Output].ExternalColumns[Photo]"
-                      dataType="image"
-                      name="Photo" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\Get Employees.Outputs[OLE DB Source Output].ExternalColumns[Notes]"
                       dataType="nText"
                       name="Notes" />
@@ -539,11 +526,6 @@
                       length="4"
                       lineageId="Package\Data Flow Task\Get Employees.Outputs[OLE DB Source Error Output].Columns[Extension]"
                       name="Extension" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Get Employees.Outputs[OLE DB Source Error Output].Columns[Photo]"
-                      dataType="image"
-                      lineageId="Package\Data Flow Task\Get Employees.Outputs[OLE DB Source Error Output].Columns[Photo]"
-                      name="Photo" />
                     <outputColumn
                       refId="Package\Data Flow Task\Get Employees.Outputs[OLE DB Source Error Output].Columns[Notes]"
                       dataType="nText"
@@ -1408,27 +1390,27 @@ where [refTable].[EmployeeID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\Clean-up Staging"
           TopLeft="400.333313208488,288.133332995839" />
         <NodeLayout
-          Size="151.2,41.6"
+          Size="151,42"
           Id="Package\Data Flow Task"
           TopLeft="403.333313208488,349.133332995839" />
         <NodeLayout
-          Size="200,41.6"
+          Size="200,42"
           Id="Package\Get Database Rowversion"
           TopLeft="368.333313208488,150.133332995839" />
         <NodeLayout
-          Size="175.2,41.6"
+          Size="175,42"
           Id="Package\Get Last Rowversion"
           TopLeft="386.333313208488,224.133332995839" />
         <NodeLayout
-          Size="123.2,41.6"
+          Size="123,42"
           Id="Package\Sync Dim"
           TopLeft="667.333313208488,352.133332995839" />
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\Update Config"
           TopLeft="641.333313208488,439.133332995839" />
         <EdgeLayout
@@ -1711,19 +1693,6 @@ where [refTable].[EmployeeID] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Load staging">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Lookup">
     <Properties>
       <Property>
@@ -1751,6 +1720,19 @@ where [refTable].[EmployeeID] = ?</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Load staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
