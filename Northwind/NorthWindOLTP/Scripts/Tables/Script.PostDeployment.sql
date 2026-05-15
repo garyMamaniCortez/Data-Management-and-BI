@@ -19,3 +19,5 @@ Plantilla de script posterior a la implementación
 :r .\Products.data.sql
 :r .\Customers.data.sql
 /*end*/
+:r .\Orders.data.sql
+:r .\OrderDetail.data.sql
