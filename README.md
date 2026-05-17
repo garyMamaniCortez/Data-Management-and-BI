@@ -93,6 +93,21 @@ Estas instrucciones son para desplegar el proyecto en **SQL Server** utilizando 
    - Hacer clic en "Publish" para ejecutar el despliegue
    - Verificar que no haya errores en la salida
 
+6. **Configurar las conexiones para source y target en los ETL**
+   - Abrir un archivo .dtsx y hacer click derecho en el lienzo → "Conexiones"
+   - Click derecho en la conexion source.NorthWindOLTP, seleccionar el servidor y la base de datos OLTP
+   - Click derecho en la conexion target.NorthWindOLAP, seleccionar el servidor y la base de datos DW
+   - Realizar esto para cada archivo .dtsx
+
+7. **Desplegar todos los ETL en SQL Server**
+   - Click derecho en un archivo .dtsx → "Desplegar"
+   - Seleccionar el paquete SSIS de sql server y aceptar
+
+8. **Configurar Job**
+   - Abrir SQL Server e ir a la parte de agente → "Trabajo" → "Nuevo trabajo"
+   - Ir a la seccion de "Pasos" y seleccionar todos los archivos .dtsx, dejar el Sales.dtsx para el ultimo paso con instrucciones de salir al ejecutar exitosamente
+   - Ir a la seccion de "Temporizador" y crear uno nuevo segun las reglas del negocio.
+
 ## Notas adicionales
 
 - La columna `rowversion` (timestamp) se incluye en todas las tablas para control de concurrencia.
@@ -181,3 +196,7 @@ Este diseño soporta las operaciones típicas de un ecommerce:
 | **RN-BI-04** | Las claves de negocio originales (OrderID, ProductID) deben conservarse para trazabilidad | Trazabilidad | Columnas `OrderID`, `ProductID` en `FactSales` |
 | **RN-BI-05** | Los datos se cargan en staging antes de pasar a dimensiones y hechos | ETL | Esquema `staging` |
 | **RN-BI-06** | La tabla PackageConfig permite cargas incrementales basadas en LastRowVersion | ETL | `PackageConfig` con `LastRowVersion` |
+
+## Pruebas realizadas
+Para las pruebas realizadas se mostrara el historial del Job corriendo automaticamente y haciendo el despliegue de los 5 ETLs
+![Prueba del Job del ETL](./Files/Images/NorthWindJobHistory.png)
